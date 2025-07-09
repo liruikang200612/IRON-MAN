@@ -3,8 +3,17 @@
 
 import { useState } from 'react';
 
+type Armor = {
+  year: string;
+  name: string;
+  highlight: string;
+  quote: string;
+  image: string;
+};
+
 export default function ArmorGallery() {
-  const [selectedArmor, setSelectedArmor] = useState(null);
+  const [selectedArmor, setSelectedArmor] = useState<Armor | null>(null);
+
   
   const armors = [
     {
